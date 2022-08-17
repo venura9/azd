@@ -1,0 +1,16 @@
+{
+	"name": "Azure Developer CLI",
+	"context": "..",
+	"dockerFile": "../Dockerfile",
+	"extensions": [
+		// "ms-azuretools.vscode-docker",
+		// "ms-vscode-remote.remote-containers",
+		// "redhat.vscode-yaml",
+		// "ms-azuretools.vscode-azurefunctions",
+		// "golang.go",
+		// "GitHub.github-vscode-theme",
+		// "hashicorp.terraform",
+		"ms-azuretools.vscode-bicep"
+	],
+	"onCreateCommand": "./onCreateCommand.sh"
+}
