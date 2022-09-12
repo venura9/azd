@@ -25,9 +25,9 @@ RUN curl -O -L https://github.com/Azure/azure-dev/releases/download/azure-dev-cl
 # Install ohmyzsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# # Set zsh as default shell
-# # `/etc/profile` logic did't like it when zsh was default.
-# RUN sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd
+# Set zsh as default shell
+# `/etc/profile` logic did't like it when zsh was default.
+RUN sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd
 
 RUN echo -e "\nfiglet 'AZ Dev CLI'\necho 'https://github.com/venura9/azd'\n" >> ~/.bashrc && \
     echo -e "\nfiglet 'AZ Dev CLI'\necho 'https://github.com/venura9/azd'\n" >> ~/.zshrc
