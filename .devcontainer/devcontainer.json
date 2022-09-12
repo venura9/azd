@@ -12,5 +12,5 @@
 		// "hashicorp.terraform",
 		"ms-azuretools.vscode-bicep"
 	],
-	"onCreateCommand": "./onCreateCommand.sh"
+	"onCreateCommand": ""
 }
