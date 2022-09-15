@@ -10,7 +10,11 @@
 		// "golang.go",
 		// "GitHub.github-vscode-theme",
 		// "hashicorp.terraform",
-		"ms-azuretools.vscode-bicep"
+		// "ms-azuretools.vscode-bicep"
 	],
-	"onCreateCommand": ""
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/workspace/${localWorkspaceFolderBasename},type=bind", 
+	"workspaceFolder": "/workspace"
 }

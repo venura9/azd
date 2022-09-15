@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/azure-cli:${AZURE_CLI_VERSION}
 ARG GH_CLI_VERSION="2.14.4"
 
 # Install Dependancies 
-RUN apk add zsh figlet vim
+RUN apk add zsh figlet vim docker npm
 
 # Install GitHub CLI
 RUN curl -O -L https://github.com/cli/cli/releases/download/v${GH_CLI_VERSION}/gh_${GH_CLI_VERSION}_linux_amd64.tar.gz &&  \
@@ -29,5 +29,6 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
 # `/etc/profile` logic did't like it when zsh was default.
 RUN sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd
 
+# Welcome Text
 RUN echo -e "\nfiglet 'AZ Dev CLI'\necho 'https://github.com/venura9/azd'\n" >> ~/.bashrc && \
     echo -e "\nfiglet 'AZ Dev CLI'\necho 'https://github.com/venura9/azd'\n" >> ~/.zshrc
